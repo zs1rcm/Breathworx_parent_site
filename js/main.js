@@ -32,6 +32,45 @@
   window.addEventListener('scroll', updateHeader, { passive: true });
   updateHeader();
 
+  // --- Newsletter Form Submission ---
+  var form = document.querySelector('.contact-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var emailInput = form.querySelector('.form-input');
+      var submitBtn = form.querySelector('.btn');
+      var email = emailInput.value.trim();
+      if (!email) return;
+
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+
+      fetch(form.getAttribute('data-endpoint'), {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email })
+      })
+        .then(function () {
+          emailInput.value = '';
+          submitBtn.textContent = 'Subscribed!';
+          submitBtn.classList.add('btn-success');
+          setTimeout(function () {
+            submitBtn.textContent = 'Subscribe';
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('btn-success');
+          }, 3000);
+        })
+        .catch(function () {
+          submitBtn.textContent = 'Try Again';
+          submitBtn.disabled = false;
+          setTimeout(function () {
+            submitBtn.textContent = 'Subscribe';
+          }, 3000);
+        });
+    });
+  }
+
   // --- Scroll Reveal Animations ---
   var animatedElements = document.querySelectorAll('[data-animate]');
 
