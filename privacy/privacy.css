@@ -1,0 +1,125 @@
+/* ============================================
+   Breathworx — Privacy Policy Pages
+   ============================================ */
+
+@import url('../css/styles.css');
+
+.privacy-page {
+  background: var(--color-warm-white);
+  min-height: 100vh;
+}
+
+.privacy-header {
+  background: linear-gradient(170deg, var(--color-warm-white) 0%, var(--color-pale-blue) 100%);
+  padding: 8rem 0 4rem;
+  text-align: center;
+}
+
+.privacy-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.privacy-back:hover {
+  color: var(--color-teal);
+}
+
+.privacy-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-deep-teal);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.privacy-app {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  background: rgba(26, 138, 155, 0.1);
+  color: var(--color-teal);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.privacy-updated {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.privacy-content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+
+.privacy-content h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-deep-teal);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.privacy-content h2:first-child {
+  margin-top: 0;
+}
+
+.privacy-content h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.privacy-content p {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.privacy-content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.privacy-content li {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 0.4rem;
+}
+
+.privacy-content strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.privacy-content a {
+  color: var(--color-teal);
+  text-decoration: underline;
+}
+
+.privacy-callout {
+  background: var(--color-pale-blue);
+  border-left: 4px solid var(--color-teal);
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.privacy-callout p {
+  margin-bottom: 0;
+  color: var(--color-text);
+}
