@@ -832,6 +832,24 @@ ul {
   color: var(--color-text-muted);
 }
 
+.contact-email {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid rgba(26, 138, 155, 0.15);
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.contact-email a {
+  color: var(--color-teal);
+  font-weight: 600;
+}
+
+.contact-email a:hover {
+  color: var(--color-deep-teal);
+  text-decoration: underline;
+}
+
 /* --- Footer --- */
 .footer {
   background: var(--color-deep-teal);
